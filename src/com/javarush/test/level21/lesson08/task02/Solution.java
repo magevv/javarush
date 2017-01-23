@@ -47,12 +47,7 @@ public class Solution {
         }
 
         public Tree clone() throws CloneNotSupportedException {
-            int bnum = getBranches().length;
-            String[] branches = new String[bnum];
-            for (int i = 0; i < bnum; i++) {
-                branches[i] = this.branches[i];
-            }
-            return new Tree(super.name, branches);
+            return new Tree(super.name, this.branches.clone());
         }
     }
 }
