@@ -32,6 +32,8 @@ public class Solution {
         public String getName() {
             return name;
         }
+
+        //public Plant clone() throws CloneNotSupportedException {throw new CloneNotSupportedException();}
     }
 
     public static class Tree extends Plant implements Cloneable {
@@ -42,12 +44,13 @@ public class Solution {
             this.branches = branches;
         }
 
-        public String[] getBranches() {
-            return branches;
+        public Tree clone() throws CloneNotSupportedException {
+            super.clone();
+            return new Tree(getName(), branches != null ? branches.clone() : null);
         }
 
-        public Tree clone() throws CloneNotSupportedException {
-            return new Tree(super.name, this.branches.clone());
+        public String[] getBranches() {
+            return branches;
         }
     }
 }
