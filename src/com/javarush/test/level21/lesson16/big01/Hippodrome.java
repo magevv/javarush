@@ -1,7 +1,6 @@
 package com.javarush.test.level21.lesson16.big01;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Yuriy on 26.01.2017.
@@ -58,12 +57,9 @@ public class Hippodrome {
 
         game = new Hippodrome();
         ArrayList<Horse> horses = game.getHorses();
-        Horse harry = new Horse("Harry", 3, 0);
-        Horse ron = new Horse("Ron", 3, 0);
-        Horse hermione = new Horse("Hermione", 3, 0);
-        horses.add(harry);
-        horses.add(ron);
-        horses.add(hermione);
+        horses.add(new Horse("Harry", 3, 0));
+        horses.add(new Horse("Ron", 3, 0));
+        horses.add(new Horse("Hermione", 3, 0));
         game.run();
         game.printWinner();
 
