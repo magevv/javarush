@@ -60,10 +60,10 @@ public class Hippodrome {
         ArrayList<Horse> horses = game.getHorses();
         Horse harry = new Horse("Harry", 3, 0);
         Horse ron = new Horse("Ron", 3, 0);
-        Horse hermiony = new Horse("Hermione", 3, 0);
+        Horse hermione = new Horse("Hermione", 3, 0);
         horses.add(harry);
         horses.add(ron);
-        horses.add(hermiony);
+        horses.add(hermione);
         game.run();
         game.printWinner();
 
